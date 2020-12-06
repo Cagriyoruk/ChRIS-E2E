@@ -6,7 +6,7 @@ pfurl --verb POST --raw --httpResponseBodyParse --http $1/api/v1/cmd --msg \
             \"key\":         \"$2\"
         },
         \"local\": {
-            \"path\":         \"/tmp/$3\",
+            \"path\":         \"/home/osboxes/output/$3\",
             \"createDir\":    true
         },
         \"transport\": {
@@ -18,4 +18,4 @@ pfurl --verb POST --raw --httpResponseBodyParse --http $1/api/v1/cmd --msg \
             }
         }
     }
-}" --quiet --jsonpprintindent 4
+}" --quiet --jsonpprintindent 4 --authToken password
